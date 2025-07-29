@@ -50,15 +50,15 @@ class _SplashViewState extends State<SplashView>
       if (user != null) {
         // Navigate to appropriate dashboard based on user type
         if (user.userType.name == 'patient') {
-          Get.offAllNamed(AppRoutes.patientDashboard);
+          Get.offAllNamed(AppRoutes.patientHome);
         } else {
           Get.offAllNamed(AppRoutes.doctorDashboard);
         }
       } else {
-        Get.offAllNamed(AppRoutes.userType);
+        Get.offAllNamed(AppRoutes.userTypeSelection);
       }
     } else {
-      Get.offAllNamed(AppRoutes.userType);
+      Get.offAllNamed(AppRoutes.userTypeSelection);
     }
   }
 

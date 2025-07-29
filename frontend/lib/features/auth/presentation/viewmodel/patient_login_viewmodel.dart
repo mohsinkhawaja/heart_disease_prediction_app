@@ -72,7 +72,7 @@ class PatientLoginViewModel extends GetxController {
         );
 
         // Navigate to patient dashboard
-        // Get.offAllNamed('/patient-dashboard');
+        Get.offAllNamed('/patient-home');
       } else if (email == 'blocked@example.com') {
         // Account blocked scenario
         throw Exception(

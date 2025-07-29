@@ -5,24 +5,25 @@ import 'base_auth_viewmodel.dart';
 
 class ResetPasswordViewModel extends BaseAuthViewModel {
   final TextEditingController newPasswordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
-  
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+
   final RxBool obscureNewPassword = true.obs;
   final RxBool obscureConfirmPassword = true.obs;
-  
+
   late final String email;
 
   @override
   void onInit() {
     super.onInit();
-    
+
     final args = Get.arguments as Map<String, dynamic>?;
     if (args == null || args['email'] == null) {
       handleError('Invalid reset data');
       Get.back();
       return;
     }
-    
+
     email = args['email'];
   }
 
@@ -48,12 +49,12 @@ class ResetPasswordViewModel extends BaseAuthViewModel {
         email,
         newPasswordController.text,
       );
-      
+
       if (success) {
         handleSuccess('Password reset successfully!');
-        
+
         // Navigate back to user type selection
-        Get.offAllNamed(AppRoutes.userType);
+        Get.offAllNamed(AppRoutes.userTypeSelection);
       } else {
         handleError('Failed to reset password');
       }
