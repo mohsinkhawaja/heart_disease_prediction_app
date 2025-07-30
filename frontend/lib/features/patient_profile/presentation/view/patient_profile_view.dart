@@ -5,7 +5,7 @@ import 'package:frontend/features/patient_profile/presentation/widgets/profile_h
 import 'package:get/get.dart';
 
 class PatientProfileView extends GetView<PatientProfileViewModel> {
-  const PatientProfileView({Key? key}) : super(key: key);
+  const PatientProfileView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -261,7 +261,7 @@ class PatientProfileView extends GetView<PatientProfileViewModel> {
                             borderRadius: BorderRadius.circular(12),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.grey.withOpacity(0.1),
+                                color: Colors.grey.withValues(alpha: 0.1),
                                 spreadRadius: 1,
                                 blurRadius: 6,
                                 offset: const Offset(0, 2),
@@ -313,7 +313,7 @@ class PatientProfileView extends GetView<PatientProfileViewModel> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             spreadRadius: 1,
             blurRadius: 6,
             offset: const Offset(0, 2),

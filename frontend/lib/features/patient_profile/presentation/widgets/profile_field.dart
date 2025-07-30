@@ -16,7 +16,7 @@ class ProfileField extends StatelessWidget {
   final VoidCallback? onTap;
 
   const ProfileField({
-    Key? key,
+    super.key,
     required this.label,
     required this.value,
     this.controller,
@@ -30,7 +30,7 @@ class ProfileField extends StatelessWidget {
     this.dropdownItems,
     this.onDropdownChanged,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

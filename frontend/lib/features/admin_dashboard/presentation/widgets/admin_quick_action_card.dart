@@ -7,12 +7,12 @@ class AdminQuickActionCard extends StatelessWidget {
   final VoidCallback onTap;
 
   const AdminQuickActionCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.icon,
     required this.color,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class AdminQuickActionCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.1),
+              color: Colors.grey.withValues(alpha: 0.1),
               spreadRadius: 1,
               blurRadius: 8,
               offset: const Offset(0, 4),
@@ -38,7 +38,7 @@ class AdminQuickActionCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: color.withOpacity(0.1),
+                color: color.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Icon(

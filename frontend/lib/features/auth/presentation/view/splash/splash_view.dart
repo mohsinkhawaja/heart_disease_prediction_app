@@ -88,7 +88,7 @@ class _SplashViewState extends State<SplashView>
                       width: 120,
                       height: 120,
                       decoration: BoxDecoration(
-                        color: AppColors.whiteColor.withOpacity(0.2),
+                        color: AppColors.whiteColor.withValues(alpha: 0.3),
                         shape: BoxShape.circle,
                       ),
                       child: Icon(
@@ -117,7 +117,7 @@ class _SplashViewState extends State<SplashView>
                     Text(
                       'AI-powered ECG Analysis',
                       style: AppFonts.bodyLarge.copyWith(
-                        color: AppColors.whiteColor.withOpacity(0.9),
+                        color: AppColors.whiteColor.withValues(alpha: 0.9),
                         fontSize: 18,
                       ),
                       textAlign: TextAlign.center,
@@ -141,7 +141,7 @@ class _SplashViewState extends State<SplashView>
                     Text(
                       'Initializing...',
                       style: AppFonts.bodyMedium.copyWith(
-                        color: AppColors.whiteColor.withOpacity(0.8),
+                        color: AppColors.whiteColor.withValues(alpha: 0.1),
                       ),
                     ),
                   ],

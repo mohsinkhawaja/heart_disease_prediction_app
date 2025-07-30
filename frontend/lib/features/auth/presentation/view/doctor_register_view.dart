@@ -454,10 +454,10 @@ class DoctorRegisterView extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(screenWidth * 0.04),
                   decoration: BoxDecoration(
-                    color: AppColors.warningColor.withOpacity(0.1),
+                    color: AppColors.warningColor.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: AppColors.warningColor.withOpacity(0.3),
+                      color: AppColors.warningColor.withValues(alpha: 0.3),
                     ),
                   ),
                   child: Column(

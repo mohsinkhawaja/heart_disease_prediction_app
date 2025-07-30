@@ -9,14 +9,14 @@ class RecentActivityCard extends StatelessWidget {
   final VoidCallback? onTap;
 
   const RecentActivityCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.subtitle,
     required this.time,
     required this.icon,
     required this.color,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class RecentActivityCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.1),
+              color: Colors.grey.withValues(alpha: 0.1),
               spreadRadius: 1,
               blurRadius: 6,
               offset: const Offset(0, 2),
@@ -41,7 +41,7 @@ class RecentActivityCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: color.withOpacity(0.2),
+                color: color.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Icon(

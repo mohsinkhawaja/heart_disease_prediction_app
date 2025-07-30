@@ -203,10 +203,10 @@ class DoctorLoginView extends StatelessWidget {
                       Container(
                         padding: EdgeInsets.all(screenWidth * 0.04),
                         decoration: BoxDecoration(
-                          color: AppColors.infoColor.withOpacity(0.1),
+                          color: AppColors.infoColor.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
-                            color: AppColors.infoColor.withOpacity(0.3),
+                            color: AppColors.infoColor.withValues(alpha: 0.3),
                           ),
                         ),
                         child: Row(
